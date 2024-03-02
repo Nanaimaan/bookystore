@@ -1,0 +1,12 @@
+.edit-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-direction: column;
+  height: 100vh;
+  padding: 70px;
+}
+.input-width {
+  width: 40%;
+}

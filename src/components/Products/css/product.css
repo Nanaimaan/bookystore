@@ -1,0 +1,14 @@
+.product-card {
+  width: 250px;
+  display: flex;
+  height: 300px;
+  text-align: center;
+  background-color: #92a8bb0e;
+}
+
+.productCard-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #21272d;
+}

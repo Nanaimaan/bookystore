@@ -1,0 +1,65 @@
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.book-description {
+  display: flex;
+  align-items: end;
+}
+
+.append-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.append-buttons button {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #007aff;
+  color: #007aff;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin: 0 10px;
+  font-size: 13px;
+}
+
+.suggested-cardContent {
+  display: flex;
+  width: 250px;
+  flex-direction: column;
+  text-align: left;
+  color: #21272d;
+
+  justify-content: center;
+}
+.suggested-container {
+  margin-top: 20px;
+  background-color: #f9f6ed;
+  width: 100%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.suggested-text {
+  display: flex;
+  flex-direction: column;
+  color: #21272d;
+}
+.suggested-card {
+  width: 250px;
+  display: flex;
+  height: 300px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.test-wrapper {
+  align-items: center;
+}
