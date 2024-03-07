@@ -28,26 +28,31 @@ const Reviews = ({ productId, user }) => {
     <>
       <div>
         <TextField
-          className="add-input"
+          className='add-input'
           onChange={handleChange}
           value={comment}
-          id="outlined-basic"
-          name="review"
-          label="Review"
-          variant="outlined"
+          name='review'
+          label='Review'
+          borderColor='#21272d'
+          sx={{ marginBottom: "20px", borderColor: "#21272d" }}
         />
       </div>
       <Rating
-        name="simple-controlled"
+        name='simple-controlled'
         value={value}
         onChange={(event, newValue) => {
           setValue(newValue);
         }}
       />
 
-      <Button variant="outlined" onClick={handleSubmit}>
+      <button
+        variant='outlined'
+        onClick={handleSubmit}
+        style={{ marginLeft: "20px" }}
+        className='button'
+      >
         Submit
-      </Button>
+      </button>
     </>
   );
 };

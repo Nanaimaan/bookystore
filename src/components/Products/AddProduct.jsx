@@ -23,57 +23,60 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="add-info">
-      <Button onClick={handleButton}> Add Product</Button>
-
+    <div className='add-info'>
+      <h1>Add New Book</h1>
       <TextField
-        className="add-input"
+        className='add-input'
         onChange={handleChange}
-        name="title"
-        id="outlined-basic"
-        label="Title"
-        variant="outlined"
+        name='title'
+        id='outlined-basic'
+        label='Title'
+        variant='outlined'
       />
       <TextField
-        className="add-input"
+        className='add-input'
         onChange={handleChange}
-        id="outlined-basic"
-        name="author"
-        label="Author"
-        variant="outlined"
+        id='outlined-basic'
+        name='author'
+        label='Author'
+        variant='outlined'
       />
       <TextField
-        className="add-input"
+        className='add-input'
         onChange={handleChange}
-        id="outlined-basic"
-        name="image"
-        label="Image"
-        variant="outlined"
+        id='outlined-basic'
+        name='image'
+        label='Image'
+        variant='outlined'
       />
       <TextField
-        className="add-input"
+        className='add-input'
         onChange={handleChange}
-        id="outlined-basic"
-        name="genre"
-        label="Genre"
-        variant="outlined"
+        id='outlined-basic'
+        name='genre'
+        label='Genre'
+        variant='outlined'
       />
       <TextField
-        className="add-input"
+        className='add-input'
         onChange={handleChange}
-        id="outlined-basic"
-        name="price"
-        label="Price"
-        variant="outlined"
+        id='outlined-basic'
+        name='price'
+        label='Price'
+        variant='outlined'
       />
       <TextField
-        className="add-input"
+        className='add-input'
         onChange={handleChange}
-        id="outlined-basic"
-        name="description"
-        label="Description"
-        variant="outlined"
-      />
+        id='outlined-basic'
+        name='description'
+        label='Description'
+        variant='outlined'
+      />{" "}
+      <button className='button' onClick={handleButton}>
+        {" "}
+        Add Product
+      </button>
     </div>
   );
 };

@@ -5,13 +5,12 @@ import { getShuffledProducts } from "./store/productsSlice";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import "./css/suggestedBooks.css";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
+import "./css/suggestedBooks.css";
 // import required modules
 import { Navigation } from "swiper/modules";
 import { getProducts } from "./store/productsSlice";
@@ -38,7 +37,7 @@ export default function SuggestedBooks() {
   console.log(products, "products");
 
   return (
-    <div className="suggested-container">
+    <div className='suggested-container'>
       <Swiper
         onSwiper={setSwiperRef}
         slidesPerView={4}
@@ -51,8 +50,8 @@ export default function SuggestedBooks() {
             key={index}
             onClick={() => navigate(`/details/${product.id}`)}
           >
-            <div className="suggested-cardContent">
-              <Card className="suggested-card">
+            <div className='suggested-cardContent'>
+              <Card className='suggested-card'>
                 <CardMedia
                   sx={{
                     height: 230,
@@ -65,22 +64,22 @@ export default function SuggestedBooks() {
                 />
               </Card>
               <CardContent
-                className="suggested-text"
+                className='suggested-text'
                 sx={{ padding: 0, paddingTop: "10px" }}
               >
                 <Typography
                   gutterBottom
-                  variant="h6"
-                  component="div"
+                  variant='h6'
+                  component='div'
                   fontSize={"16px"}
                   fontWeight={600}
                 >
                   {product.title}
                 </Typography>
-                <Typography variant="body2" color="text.primary">
+                <Typography variant='body2' color='text.primary'>
                   {product.author}
                 </Typography>
-                <Typography variant="body2" color="text.primary">
+                <Typography variant='body2' color='text.primary'>
                   ${product.price}
                 </Typography>
               </CardContent>

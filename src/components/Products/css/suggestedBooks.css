@@ -45,7 +45,6 @@
   height: 450px;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 .suggested-text {
   display: flex;
@@ -58,8 +57,5 @@
   height: 300px;
   text-align: center;
   justify-content: center;
-  align-items: center;
-}
-.test-wrapper {
   align-items: center;
 }

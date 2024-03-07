@@ -52,27 +52,24 @@ const ProductDetails = () => {
 
   return (
     <div>
-      <div className="detailWrapper">
-        <div className="bookImage">
+      <div className='detailWrapper'>
+        <div className='bookImage'>
           <img src={oneProduct.image} />
         </div>
-        <div className="bookDetails">
-          <div className="book-title">
+        <div className='bookDetails'>
+          <div className='book-title'>
             <h1>{oneProduct.title}</h1>
             <p>{oneProduct.author}</p>
+            <p>${oneProduct.price}</p>
           </div>
-          <p>${oneProduct.price}</p>
+
           <div>
-            <Button
+            <button
+              className='button'
               onClick={() => dispatch(addToCart(oneProduct))}
-              // color={
-              //   dispatch(existingProduct({ id: oneProduct.id }))
-              //     ? "secondary"
-              //     : "primary"
-              // }
             >
               Add to Bag
-            </Button>
+            </button>
           </div>
           {user.isAdmin ? (
             <div>
@@ -82,40 +79,47 @@ const ProductDetails = () => {
               </Button>
               <Button
                 onClick={() => dispatch(deleteProduct(oneProduct.id))}
-                size="small"
+                size='small'
               >
                 Delete
               </Button>
             </div>
           ) : null}
-          <div>
-            <p>{calculateReviewsAverage()}</p>
 
-            <div className="book-description">
-              <p>{oneProduct.description}</p>
-            </div>
+          <p>{reviews.length > 0 ? calculateReviewsAverage() : "No reviews"}</p>
+
+          <div className='book-description'>
+            <h3>Overview</h3>
+            <p>{oneProduct.description}</p>
           </div>
         </div>
       </div>
 
-      <div style={{ width: "100%", height: "300px" }}>
-        <h3>You might also like</h3>
+      <div className='suggested-part'>
+        <h3 className='details-suggested-text'>You might also like</h3>
         <SuggestedBooks />
-      </div>
-      <div style={{ paddingTop: "100px", paddingLeft: "50px" }}>
-        <Reviews productId={id} user={user} />
-      </div>
-      <div className="reviews-list">
-        <h3>Product Reviews </h3>
-        <ul>
-          {reviews.map((review, index) => (
-            <li key={index}>
-              <p> User: {review.author}</p>
-              <p> Rating: {review.rating}</p>
-              <p> Review: {review.text}</p>
-            </li>
-          ))}
-        </ul>
+
+        <div
+          style={{
+            paddingTop: "100px",
+            paddingLeft: "50px",
+            marginBottom: "10px",
+          }}
+        >
+          <Reviews productId={id} user={user} />
+        </div>
+        <div className='reviews-list'>
+          <h3>Product Reviews </h3>
+          <ul>
+            {reviews.map((review, index) => (
+              <li key={index}>
+                <p> User: {review.author}</p>
+                <p> Rating: {review.rating}</p>
+                <p> Review: {review.text}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

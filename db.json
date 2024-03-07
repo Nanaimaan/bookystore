@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": 2,
+      "id": "2",
       "title": "Atomic Habits",
       "author": "James Clear",
       "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1655988385l/40121378.jpg",
@@ -30,7 +30,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Steve Jobs",
       "author": "Walter Isaacson",
       "image": "https://m.media-amazon.com/images/I/71sVQDj0SCL._SL1500_.jpg",
@@ -58,7 +58,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Begin Again",
       "author": "Emma Lord",
       "image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1674078025-60784619-1674077995.jpg?crop=1xw:1xh;center,top&resize=980:*",
@@ -86,7 +86,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Homecoming",
       "author": "Kate Morton",
       "image": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-720w,f_auto,q_auto:best/newscms/2023_18/1943844/51lbm7eqqil-_ac_sy780_.jpg",
@@ -114,7 +114,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "The Exchange: After The Firm",
       "author": "John Grisham",
       "image": "https://m.media-amazon.com/images/I/91-Dqdv3a8L._SL1500_.jpg",
@@ -142,7 +142,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Hello Beautiful (Oprah's Book Club)",
       "author": "Ann Napolitano ",
       "image": "https://m.media-amazon.com/images/I/912iiFEK2wL._SL1500_.jpg",
@@ -170,7 +170,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "The Psychology of Money",
       "author": "Morgan Housel ",
       "image": "https://m.media-amazon.com/images/I/71TRUbzcvaL._SY522_.jpg",
@@ -198,7 +198,7 @@
       ]
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "The Ballad of Songbirds and Snakes (A Hunger Games Novel)",
       "author": "Suzanne Collins",
       "image": "https://m.media-amazon.com/images/I/61k7JqSWOUL._SY522_.jpg",
@@ -226,7 +226,7 @@
       ]
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "The Seven Husbands of Evelyn Hugo",
       "author": "Taylor Jenkins Reid",
       "image": "https://m.media-amazon.com/images/I/71ZvnK+4JiL._SY522_.jpg",
@@ -254,7 +254,7 @@
       ]
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "The Little Book of Hygge: The Danish Way to Live Well",
       "author": "Meik Wiking",
       "image": "https://m.media-amazon.com/images/I/81TaKyoERsL._SY522_.jpg",
@@ -282,12 +282,12 @@
       ]
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "By Any Other Name: A Novel",
       "author": "Jodi Picoult",
       "image": "https://dynamic.indigoimages.ca/v1/books/books/1039002625/1.jpg?width=810&maxHeight=810&quality=85",
       "genre": "fiction",
-      "price": 38.0,
+      "price": 38,
       "reviews": [
         {
           "id": 1,
@@ -310,7 +310,7 @@
       ]
     },
     {
-      "id": 13,
+      "id": "13",
       "title": "The Life Impossible: A Novel",
       "author": "Matt Haig",
       "image": "https://dynamic.indigoimages.ca/v1/books/books/1443466492/1.jpg?width=810&maxHeight=810&quality=85",
@@ -337,9 +337,8 @@
         }
       ]
     },
-
     {
-      "id": 14,
+      "id": "14",
       "title": "The Lighthouse Witches",
       "author": "C.J. Cooke",
       "image": "https://dynamic.indigoimages.ca/v1/books/books/0008455449/1.jpg?width=810&maxHeight=810&quality=85",
@@ -367,7 +366,7 @@
       ]
     },
     {
-      "id": 15,
+      "id": "15",
       "title": "A Moveable Feast",
       "author": "ERNEST HEMINGWAY",
       "image": "https://dynamic.indigoimages.ca/v1/books/books/9355462573/1.jpg?width=810&maxHeight=810&quality=85",
@@ -395,12 +394,12 @@
       ]
     },
     {
-      "id": 16,
+      "id": "16",
       "title": "Collide",
       "author": "Bal Khabra",
       "image": "https://dynamic.indigoimages.ca/v1/books/books/073525043X/1.jpg?width=810&maxHeight=810&quality=85",
       "genre": "romance",
-      "price": 20.0,
+      "price": 20,
       "reviews": [
         {
           "id": 1,
@@ -423,12 +422,12 @@
       ]
     },
     {
-      "id": 17,
+      "id": "17",
       "title": "Happily Never After",
       "author": "Lynn Painter",
       "image": "https://dynamic.indigoimages.ca/v1/books/books/0593638018/1.jpg?width=810&maxHeight=810&quality=85",
       "genre": "romance",
-      "price": 20.0,
+      "price": 20,
       "reviews": [
         {
           "id": 1,
@@ -451,12 +450,12 @@
       ]
     },
     {
-      "id": 18,
+      "id": "18",
       "title": "The Phoenix Bride: A Novel",
       "author": "Natasha Siegel",
       "image": "https://dynamic.indigoimages.ca/v1/books/books/0593597877/1.jpg?width=810&maxHeight=810&quality=85",
       "genre": "romance",
-      "price": 20.0,
+      "price": 20,
       "reviews": [
         {
           "id": 1,
@@ -479,7 +478,7 @@
       ]
     },
     {
-      "id": 19,
+      "id": "19",
       "title": "Chasing Love - Special Edition",
       "author": "Kat T Masen",
       "image": "https://dynamic.indigoimages.ca/v1/books/books/9798755757355/1.jpg?width=810&maxHeight=810&quality=85",
@@ -505,163 +504,170 @@
           "user": "test3@gmail.com"
         }
       ]
+    },
+    {
+      "id": "030f",
+      "title": "",
+      "image": "",
+      "description": "",
+      "author": ""
     }
   ],
   "reviews": [
     {
       "text": "hello",
       "productId": "2",
-      "id": 2
+      "id": "2"
     },
     {
       "text": "test comment",
       "productId": "2",
-      "id": 3
+      "id": "3"
     },
     {
       "text": "new comment",
       "productId": "3",
-      "id": 4
+      "id": "4"
     },
     {
       "comment": "hey!",
       "productId": "2",
-      "id": 5
+      "id": "5"
     },
     {
       "text": "testing a comment ",
       "productId": "2",
-      "id": 6
+      "id": "6"
     },
     {
       "text": "hey",
       "productId": "2",
-      "id": 7
+      "id": "7"
     },
     {
       "text": "hello",
       "productId": "2",
-      "id": 8
+      "id": "8"
     },
     {
       "text": "test",
       "productId": "2",
-      "id": 9
+      "id": "9"
     },
     {
       "rating": 3,
       "text": "good ",
       "productId": "2",
-      "id": 10
+      "id": "10"
     },
     {
       "rating": 3,
       "text": "this book is great",
       "productId": "2",
-      "id": 11
+      "id": "11"
     },
     {
       "rating": 3,
       "author": "testesttest@gmail.com",
       "text": "nice",
       "productId": "2",
-      "id": 12
+      "id": "12"
     },
     {
       "rating": 3,
       "text": "hello",
       "productId": "2",
-      "id": 13
+      "id": "13"
     },
     {
       "rating": 4,
       "text": "good",
       "productId": "2",
-      "id": 14
+      "id": "14"
     },
     {
       "rating": 4,
       "text": "Nice one!",
       "productId": "5",
-      "id": 15
+      "id": "15"
     },
     {
       "rating": 5,
       "text": "good",
       "productId": "5",
-      "id": 16
+      "id": "16"
     },
     {
       "rating": 2,
       "text": "ok",
       "productId": "5",
-      "id": 17
+      "id": "17"
     },
     {
       "rating": 3,
       "text": "good",
       "productId": "5",
-      "id": 18
+      "id": "18"
     },
     {
       "rating": 5,
       "text": "nice",
       "productId": "5",
-      "id": 19
+      "id": "19"
     },
     {
       "rating": 4,
       "text": "nice",
       "productId": "5",
-      "id": 20
+      "id": "20"
     },
     {
       "rating": 5,
       "text": "good",
       "productId": "5",
-      "id": 21
+      "id": "21"
     },
     {
       "rating": 5,
       "text": "very good",
       "productId": "5",
-      "id": 22
+      "id": "22"
     },
     {
       "rating": 2,
       "text": "ok",
       "productId": "5",
-      "id": 23
+      "id": "23"
     },
     {
       "rating": 5,
       "text": "good",
       "productId": "5",
-      "id": 24
+      "id": "24"
     },
     {
       "rating": 3,
       "text": "very gooood",
       "productId": "5",
-      "id": 25
+      "id": "25"
     },
     {
       "rating": 1,
       "text": "i did not like it",
       "productId": "5",
-      "id": 26
+      "id": "26"
     },
     {
       "rating": 5,
       "text": "Interesting ",
       "productId": "9",
-      "id": 27
+      "id": "27"
     },
     {
       "rating": 4,
       "text": "Good",
       "productId": "9",
-      "id": 28
+      "id": "28"
     }
   ],
   "profile": {

@@ -1,0 +1,30 @@
+.checkout_container {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+.checkout-title {
+  margin: 2rem 0;
+}
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.subtotal {
+  display: flex;
+  justify-content: space-between;
+}
+.shipping {
+  display: flex;
+  justify-content: space-between;
+}
+.tax {
+  display: flex;
+  justify-content: space-between;
+}
+
+.estimated-total {
+  display: flex;
+  justify-content: space-between;
+}

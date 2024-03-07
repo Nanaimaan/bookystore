@@ -7,29 +7,33 @@ import AddProduct from "../Products/AddProduct";
 import EditProduct from "../Products/EditProduct";
 import ProductDetails from "../Products/ProductDetails";
 import CartPage from "../Cart/CartPage";
+import Events from "../Products/Events";
 
 const MainRouts = () => {
   return (
     <Routes>
-      <Route path="/" element={<Homepage />}>
+      <Route path='/' element={<Homepage />}>
         {" "}
       </Route>
-      <Route path="/signup" element={<Register />}>
+      <Route path='/signup' element={<Register />}>
         {" "}
       </Route>
-      <Route path="/signin" element={<Login />}>
+      <Route path='/signin' element={<Login />}>
         {" "}
       </Route>
-      <Route path="/add" element={<AddProduct />}>
+      <Route path='/add' element={<AddProduct />}>
         {" "}
       </Route>
-      <Route path="/edit/:id" element={<EditProduct />}>
+      <Route path='/events' element={<Events />}>
         {" "}
       </Route>
-      <Route path="/details/:id" element={<ProductDetails />}>
+      <Route path='/edit/:id' element={<EditProduct />}>
         {" "}
       </Route>
-      <Route path="/cart/" element={<CartPage />}>
+      <Route path='/details/:id' element={<ProductDetails />}>
+        {" "}
+      </Route>
+      <Route path='/cart/' element={<CartPage />}>
         {" "}
       </Route>
     </Routes>

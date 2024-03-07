@@ -33,8 +33,8 @@ const pages = [
   },
   { title: "Pricing", link: "/price" },
   {
-    title: "Blog",
-    link: "/blog",
+    title: "Events",
+    link: "/events",
   },
   {
     title: "Add Product",
@@ -83,16 +83,16 @@ function Navbar() {
   };
 
   return (
-    <AppBar className="nav" position="static" sx={{ marginBottom: "50px" }}>
-      <Container maxWidth="xl" className="nav">
-        <Toolbar className="toolbar" disableGutters>
+    <AppBar className='nav' position='static' sx={{ marginBottom: "50px" }}>
+      <Container maxWidth='xl' className='nav'>
+        <Toolbar className='toolbar' disableGutters>
           {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
           <Typography
-            className="nav"
-            variant="h6"
+            className='nav'
+            variant='h6'
             noWrap
-            component="a"
-            href="/"
+            component='a'
+            href='/'
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -103,22 +103,22 @@ function Navbar() {
               textDecoration: "none",
             }}
           >
-            <img src={logo} width="50px" height="50px" />
+            <img src={logo} width='50px' height='50px' />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
+              size='large'
+              aria-label='account of current user'
+              aria-controls='menu-appbar'
+              aria-haspopup='true'
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color='inherit'
             >
               <MenuIcon />
             </IconButton>
             <Menu
-              id="menu-appbar"
+              id='menu-appbar'
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: "bottom",
@@ -137,11 +137,11 @@ function Navbar() {
             >
               {pages.map((page, index) => (
                 <MenuItem
-                  className="nav"
+                  className='nav'
                   key={index}
                   onClick={handleCloseNavMenu}
                 >
-                  <NavLink className="nav" to={page.link}>
+                  <NavLink className='nav' to={page.link}>
                     <Typography
                       sx={{
                         color: "#21272d",
@@ -160,7 +160,7 @@ function Navbar() {
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page, index) => (
-              <NavLink className="nav" to={page.link} key={index}>
+              <NavLink className='nav' to={page.link} key={index}>
                 <Button
                   onClick={handleCloseNavMenu}
                   sx={{
@@ -177,11 +177,11 @@ function Navbar() {
           </Box>
 
           <SearchInp />
-          <NavLink className="nav" to="/cart">
+          <NavLink className='nav' to='/cart'>
             <Badge
               sx={{ my: 2, color: "#21272D", display: "block" }}
               badgeContent={cart?.products?.products.length}
-              color="error"
+              color='error'
             >
               <ShoppingCartIcon style={{ color: "#21272d" }} />
             </Badge>
@@ -189,18 +189,18 @@ function Navbar() {
 
           {checkUser() ? (
             <Box sx={{ flexGrow: 0, marginLeft: "20px" }}>
-              <Tooltip title="Open settings">
+              <Tooltip title='Open settings'>
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                   <Avatar
                     sx={{ backgroundColor: "#21272D" }}
-                    alt="Remy Sharp"
-                    src="/static/images/avatar/2.jpg"
+                    alt='Remy Sharp'
+                    src='/static/images/avatar/2.jpg'
                   />
                 </IconButton>
               </Tooltip>
               <Menu
                 sx={{ mt: "45px" }}
-                id="menu-appbar"
+                id='menu-appbar'
                 anchorEl={anchorElUser}
                 anchorOrigin={{
                   vertical: "top",
@@ -215,21 +215,21 @@ function Navbar() {
                 onClose={handleCloseUserMenu}
               >
                 <MenuItem onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">Profile</Typography>
+                  <Typography textAlign='center'>Profile</Typography>
                 </MenuItem>
                 <MenuItem onClick={handleLogOut}>
-                  <Typography textAlign="center">Logout</Typography>
+                  <Typography textAlign='center'>Logout</Typography>
                 </MenuItem>
               </Menu>
             </Box>
           ) : (
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
-              <NavLink className="nav" to="/signup">
+              <NavLink className='nav' to='/signup'>
                 <Button sx={{ my: 2, color: "#21272d", display: "block" }}>
                   Sign Up
                 </Button>
               </NavLink>
-              <NavLink className="nav" to="/signin">
+              <NavLink className='nav' to='/signin'>
                 <Button sx={{ my: 2, color: "#21272d", display: "block" }}>
                   Sign In
                 </Button>

@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import CartItem from "./CartItem";
 import "./css/cartPage.css";
+import CheckoutPage from "./CheckoutPage";
 
 export default function CartPage() {
   const dispatch = useDispatch();
@@ -22,13 +23,15 @@ export default function CartPage() {
     dispatch(getCart());
   }, []);
   return (
-    <div>
-      <div className="cartList">
+    <div className='cartPageList'>
+      <div className='cartitem-page'>
         {products?.products.map((item, index) => {
           return <CartItem key={index} product={item} />;
         })}
       </div>
-      <div className="bill">{products.totalPrice}</div>
+      <div className='checkout-page'>
+        <CheckoutPage totalPrice={products.totalPrice} />
+      </div>
     </div>
   );
 }
