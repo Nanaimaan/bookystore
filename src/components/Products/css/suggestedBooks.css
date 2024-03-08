@@ -20,8 +20,8 @@
 .append-buttons button {
   display: inline-block;
   cursor: pointer;
-  border: 1px solid #007aff;
-  color: #007aff;
+  border: 1px solid#21272d;
+  color: #21272d;
   text-decoration: none;
   padding: 4px 10px;
   border-radius: 4px;
@@ -40,11 +40,12 @@
 }
 .suggested-container {
   margin-top: 20px;
-  background-color: #f9f6ed;
+  background-color: #c6d3e0;
   width: 100%;
-  height: 450px;
+  height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .suggested-text {
   display: flex;
@@ -52,6 +53,7 @@
   color: #21272d;
 }
 .suggested-card {
+  margin-top: 60px;
   width: 250px;
   display: flex;
   height: 300px;

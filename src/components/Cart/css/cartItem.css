@@ -1,14 +1,15 @@
 .cartItem {
   display: flex;
-  justify-content: space-between;
+
   flex-direction: column;
+
+  margin: 2rem 0;
   width: 100%;
   height: 100%;
-  margin: 2rem 0;
 }
 .cartItemBody {
   display: flex;
-  justify-content: space-evenly;
+
   width: 100%;
   gap: 6rem;
 }

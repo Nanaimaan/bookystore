@@ -5,6 +5,8 @@ import Navbar from "./components/UI/Navbar";
 import Pagination from "./components/UI/PaginationComp";
 import { authListener } from "./components/Auth/store/authSlice";
 import { useDispatch } from "react-redux";
+import Container from "@mui/material/Container";
+import Footer from "./components/UI/Footer";
 
 function App() {
   const dispatch = useDispatch();
@@ -14,9 +16,12 @@ function App() {
     }
   }, []);
   return (
-    <div className="App">
+    <div className='App'>
       <Navbar />
-      <MainRouts />
+      <Container maxWidth='xl' className='nav'>
+        <MainRouts />
+      </Container>
+      <Footer />
     </div>
   );
 }

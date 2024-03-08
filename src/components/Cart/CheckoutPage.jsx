@@ -2,6 +2,7 @@ import React from "react";
 import "./css/checkoutPage.css";
 
 function CheckoutPage({ totalPrice }) {
+  let total = parseFloat(totalPrice.toFixed(2));
   return (
     <div className='checkout_container'>
       <div className='checkout-title'>
@@ -10,7 +11,7 @@ function CheckoutPage({ totalPrice }) {
       <div className='summary'>
         <div className='subtotal'>
           <p>Subtotal</p>
-          <p>${totalPrice}</p>
+          <p>${total}</p>
         </div>
         <div className='shipping'>
           <p>Shipping</p>
@@ -23,7 +24,7 @@ function CheckoutPage({ totalPrice }) {
         <hr />
         <div className='estimated-total'>
           <h4>Estimated total</h4>
-          <h4>${totalPrice}</h4>
+          <h4>${total}</h4>
         </div>
       </div>
     </div>

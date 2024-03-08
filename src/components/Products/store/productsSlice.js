@@ -14,14 +14,15 @@ const initialState = {
 
 export const getProducts = createAsyncThunk(
   "product/getProducts",
-  async (product) => {
-    const res = await axios(API + window.location.search);
 
-    return { data: res.data, totalCount: res.headers["x-total-count"] };
+  async () => {
+    console.log(`${API}${window.location.search || "?_limit=9"}`, "here");
+    const res = await axios.get(`${API}${window.location.search}&_limit=${9}`);
+    console.log(res.headers["X-Total-Count"]);
+    return { data: res.data, totalCount: res.headers.get("X-Total-Count") };
   }
 );
 
-console.warn(API + window.location.search);
 export const addProduct = createAsyncThunk(
   "product/addProduct",
   async (newProduct) => {
@@ -88,13 +89,10 @@ export const productsSlice = createSlice({
     [getProducts.fulfilled]: (state, { payload: { totalCount, data } }) => {
       state.products = data;
       state.loading = false;
-      let count = 1;
+      console.log(totalCount);
       if (totalCount) {
-        count = totalCount;
-        console.log(totalCount, "total");
-      }
-      if (totalCount) {
-        const value = Math.ceil(count / 9);
+        const value = Math.ceil(totalCount / 9);
+
         state.pageTotalCount = value;
       }
     },

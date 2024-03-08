@@ -15,6 +15,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "./store/authSlice";
 import { useNavigate } from "react-router-dom";
+import logo from "../../images/logo-no-background.png";
 
 // TODO remove, this demo shouldn't need to reset the theme.
 
@@ -40,27 +41,35 @@ export default function Login() {
   };
 
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <Grid container component="main" sx={{ height: "100vh" }}>
-        <CssBaseline />
+    <div
+      className='auth-container'
+      style={{
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      {/* //   <ThemeProvider theme={defaultTheme}> */}
+      <Grid
+        container
+        component='main'
+        sx={{
+          height: "70vh",
+          width: "80%",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <Grid
           item
-          xs={false}
-          sm={4}
-          md={7}
-          sx={{
-            backgroundImage:
-              "url(https://source.unsplash.com/random?wallpapers)",
-            backgroundRepeat: "no-repeat",
-            backgroundColor: (t) =>
-              t.palette.mode === "light"
-                ? t.palette.grey[50]
-                : t.palette.grey[900],
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+          xs={4}
+          sm={12}
+          md={5}
+          component={Paper}
+          elevation={12}
+          square
+        >
           <Box
             sx={{
               my: 8,
@@ -68,63 +77,76 @@ export default function Login() {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              justifyContent: "center",
             }}
           >
             <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-              <LockOutlinedIcon />
+              <img src={logo} width='40px' height='40px' />
             </Avatar>
-            <Typography component="h1" variant="h5">
+            <Typography component='h1' variant='h5'>
               Sign in
             </Typography>
             <Box
-              component="form"
+              component='form'
               noValidate
               onSubmit={handleSubmit}
               sx={{ mt: 1 }}
             >
               <TextField
-                margin="normal"
+                margin='normal'
                 required
                 fullWidth
-                id="email"
-                label="Email Address"
-                name="email"
-                autoComplete="email"
+                id='email'
+                label='Email Address'
+                name='email'
+                autoComplete='email'
                 autoFocus
+                sx={{
+                  "&:active": {
+                    borderColor: "your-focused-color-here",
+                  },
+                }}
               />
               <TextField
-                margin="normal"
+                margin='normal'
                 required
                 fullWidth
-                name="password"
-                label="Password"
-                type="password"
-                id="password"
-                autoComplete="current-password"
+                name='password'
+                label='Password'
+                type='password'
+                id='password'
+                autoComplete='current-password'
               />
               <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
+                control={<Checkbox value='remember' color='primary' />}
+                label='Remember me'
               />
               <Button
-                type="submit"
+                className='button'
+                type='submit'
                 fullWidth
-                variant="contained"
-                sx={{ mt: 3, mb: 2 }}
+                variant='contained'
+                sx={{
+                  mt: 3,
+                  mb: 2,
+                  padding: "10px",
+                  backgroundColor: "#21272D",
+                  fontWeight: "600",
+                }}
               >
                 Sign In
               </Button>
-              <Typography variant="subtitle1" color="error">
+              <Typography variant='subtitle1' color='error'>
                 {error}
               </Typography>
               <Grid container>
                 <Grid item xs>
-                  <Link href="#" variant="body2">
+                  <Link href='#' variant='body2' sx={{ color: "#21272D" }}>
                     Forgot password?
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2">
+                  <Link href='#' variant='body2' sx={{ color: "#21272D" }}>
                     {"Don't have an account? Sign Up"}
                   </Link>
                 </Grid>
@@ -133,6 +155,7 @@ export default function Login() {
           </Box>
         </Grid>
       </Grid>
-    </ThemeProvider>
+      {/* // </ThemeProvider> */}
+    </div>
   );
 }

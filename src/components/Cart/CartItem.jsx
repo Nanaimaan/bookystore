@@ -17,7 +17,6 @@ const CartItem = ({ product: { item, count, subPrice } }) => {
             <div className='item-cart-text'>
               <h4>{item.title}</h4>
               <p>{item.author}</p>
-              <p>{item.genre}</p>
             </div>
             <div className='cartItemAction'>
               <input

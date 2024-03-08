@@ -6,7 +6,7 @@
   background-color: #92a8bb0e;
 }
 
-.productCard-text {
+.product-card-text {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

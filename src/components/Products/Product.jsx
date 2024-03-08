@@ -15,25 +15,27 @@ export default function Product({ product }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   return (
-    <div productCard-container>
+    <div className='product-card-container'>
       <Card
-        className="product-card"
+        className='product-card'
         onClick={() => navigate(`/details/${product.id}`)}
         sx={{ backgroundColor: "#0f2d481c" }}
       >
         <CardMedia
           sx={{ height: 230, width: 150, margin: "auto", paddingTop: "15px" }}
           image={product.image}
+          alt={product.title}
+          component='img'
         />
       </Card>
       <CardContent
-        className="productCard-text"
+        className='productCard-text'
         sx={{ padding: 0, paddingTop: "10px" }}
       >
         <Typography
           gutterBottom
-          variant="h5"
-          component="div"
+          variant='h5'
+          component='div'
           fontSize={"16px"}
           fontWeight={"600"}
         >

@@ -31,7 +31,7 @@ const pages = [
     title: "Products",
     link: "/",
   },
-  { title: "Pricing", link: "/price" },
+  // { title: "Pricing", link: "/price" },
   {
     title: "Events",
     link: "/events",
@@ -83,8 +83,17 @@ function Navbar() {
   };
 
   return (
-    <AppBar className='nav' position='static' sx={{ marginBottom: "50px" }}>
-      <Container maxWidth='xl' className='nav'>
+    <AppBar
+      className='nav'
+      position='static'
+      sx={{
+        marginBottom: "50px",
+        maxWidth: "xxl",
+        boxShadow: "none",
+        borderBottom: "1px solid grey",
+      }}
+    >
+      <Container maxWidth='xxl' className='nav'>
         <Toolbar className='toolbar' disableGutters>
           {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
           <Typography

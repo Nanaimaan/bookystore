@@ -48,7 +48,6 @@ const ProductDetails = () => {
     average = average / reviews.length;
     return average > 0 ? average.toFixed(1) : 0;
   };
-  console.log(oneProduct, "oneP");
 
   return (
     <div>

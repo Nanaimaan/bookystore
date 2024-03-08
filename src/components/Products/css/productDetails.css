@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: flex-start;
   padding: 3rem;
+  margin-bottom: 5rem;
 }
 .bookImage {
   display: flex;
@@ -58,10 +59,11 @@
 
 .details-suggested-text {
   font-size: 1.35rem;
+  margin: 50px;
 }
 .suggested-part {
-  margin-top: 10px;
+  margin: 5rem 0;
 }
-.suggested-part h3 {
-  margin: 0 50px;
+.reviews-list h3 {
+  margin:50px;
 }

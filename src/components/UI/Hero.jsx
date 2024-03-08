@@ -4,8 +4,16 @@ import SuggestedBooks from "../Products/SuggestedBooks";
 export default function Hero() {
   return (
     <div>
-      <div className="hero" style={{ marginTop: "7%" }}>
-        <div className="hero-text">
+      <div
+        className='hero'
+        style={{
+          marginTop: "7%",
+          backgroundColor: "#f9f6ed",
+          display: "flex",
+          justifyContent: "space-between",
+        }}
+      >
+        <div className='hero-text'>
           <h1>Discover Endless Stories</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. At
@@ -16,9 +24,9 @@ export default function Hero() {
         </div>
 
         <img
-          style={{ width: "50%", height: "20%", paddingRight: "70px" }}
-          src="https://assets.indigoimages.ca/transform/e667d8a9-726f-44be-9802-551f85953de6/HP-WK-40-Thrillers-D"
-          alt="banner-image"
+          style={{ width: "50%", height: "20%" }}
+          src='https://assets.indigoimages.ca/transform/e667d8a9-726f-44be-9802-551f85953de6/HP-WK-40-Thrillers-D'
+          alt='banner-image'
         />
       </div>
       <div
@@ -29,7 +37,7 @@ export default function Hero() {
           marginTop: "7%",
           marginBottom: "5%",
         }}
-        className="new-releases"
+        className='new-releases'
       >
         <h2 style={{ marginBottom: "15px", marginLeft: "50px" }}>
           New Releases We Love

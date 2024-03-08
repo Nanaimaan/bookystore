@@ -34,8 +34,6 @@ export default function SuggestedBooks() {
     setShuffled(random);
   }, [shuffledProducts]);
 
-  console.log(products, "products");
-
   return (
     <div className='suggested-container'>
       <Swiper
@@ -60,7 +58,6 @@ export default function SuggestedBooks() {
                     paddingTop: "15px",
                   }}
                   image={product.image}
-                  title={product.title}
                 />
               </Card>
               <CardContent

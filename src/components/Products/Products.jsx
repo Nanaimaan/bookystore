@@ -16,20 +16,24 @@ const Products = () => {
     (state) => state.products
   );
   const [searchParams, setSearchParams] = useSearchParams();
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(0);
 
   // useEffect(() => {
   //   dispatch(getProducts());
   // }, [dispatch]);
 
   useEffect(() => {
-    setSearchParams({ q: searchParams.get("q"), _page: page, _limit: 9 });
+    setSearchParams({
+      q: searchParams.get("q") ? searchParams.get("q") : "",
+      _page: page,
+      // _limit: 9,
+    });
     dispatch(getProducts());
   }, [page]);
 
   return (
     <div>
-      <div className="filter-products-wrapper">
+      <div className='filter-products-wrapper'>
         <Filter
           searchParams={searchParams}
           setSearchParams={setSearchParams}
@@ -57,7 +61,7 @@ const Products = () => {
             sx={{ display: "flex", flexGrow: 1, marginLeft: "50px" }}
             container
             spacing={5}
-            justifyContent="center"
+            justifyContent='center'
             margin={"10px"}
           >
             {products.map((product) => (
