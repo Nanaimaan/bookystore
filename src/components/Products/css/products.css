@@ -1,31 +1,18 @@
-.hero {
+.filter-products-wrapper {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: center;
   align-items: center;
 }
 
-.hero-text {
-  flex: 1;
-  padding: 70px; /* Adjust as needed */
-  width: 20%;
-  margin-right: 50px;
-}
-
-.hero-image {
-  width: 100px;
-  padding: 50px;
-  height: 30%;
-}
-.hero-text h1 {
-  padding-bottom: 40px;
-  font-size: 40px;
-}
-.hero-text p {
-  padding-bottom: 40px;
-  font-size: 25px;
-}
-
-.filter-products-wrapper {
-  margin-left: 50px;
+@media screen and (max-width: 600px) {
+  .products_card {
+    width: 200px;
+  }
+  .filter-products-wrapper {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

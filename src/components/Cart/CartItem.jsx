@@ -12,29 +12,28 @@ const CartItem = ({ product: { item, count, subPrice } }) => {
       <div className='cartItemBody'>
         <div className='cartItem-content'>
           <img src={item.image} />
-
-          <div className='cartText'>
-            <div className='item-cart-text'>
-              <h4>{item.title}</h4>
-              <p>{item.author}</p>
-            </div>
-            <div className='cartItemAction'>
-              <input
-                onChange={(e) =>
-                  dispatch(
-                    changeProductCount({ id: item.id, count: +e.target.value })
-                  )
-                }
-                type='number'
-                value={count}
-                // placeholder={count}
-              />
-              <button> Add to wishlist</button>
-              <button onClick={() => dispatch(removeCart({ id: item.id }))}>
-                {" "}
-                Remove
-              </button>
-            </div>
+        </div>
+        <div className='cartText'>
+          <div className='item-cart-text'>
+            <h4>{item.title}</h4>
+            <p>{item.author}</p>
+          </div>
+          <div className='cartItemAction'>
+            <input
+              onChange={(e) =>
+                dispatch(
+                  changeProductCount({ id: item.id, count: +e.target.value })
+                )
+              }
+              type='number'
+              value={count}
+              // placeholder={count}
+            />
+            <button> Add to wishlist</button>
+            <button onClick={() => dispatch(removeCart({ id: item.id }))}>
+              {" "}
+              Remove
+            </button>
           </div>
         </div>
         <div className='cartItemPrice'>

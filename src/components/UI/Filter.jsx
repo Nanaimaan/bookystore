@@ -60,39 +60,43 @@ export default function Filter({
   };
 
   return (
-    <div className="filter-type-container">
-      <Box>
-        <Button
-          className="flex-button"
+    <div className='filter-type-container'>
+      <div className='test'>
+        <button
+          className='flex-button'
           sx={{ color: "#21272D", fontWeight: "600" }}
           onClick={() => handleType("all")}
         >
           All
-        </Button>
-        <Button
+        </button>
+        <button
+          className='flex-button'
           sx={{ color: "#21272D", fontWeight: "600" }}
           onClick={() => handleType("fantasy")}
         >
           Fantasy
-        </Button>
-        <Button
+        </button>
+        <button
+          className='flex-button'
           sx={{ color: "#21272D", fontWeight: "600" }}
           onClick={() => handleType("fiction")}
         >
           Fiction
-        </Button>
-        <Button
+        </button>
+        <button
+          className='flex-button'
           sx={{ color: "#21272D", fontWeight: "600" }}
           onClick={() => handleType("romance")}
         >
           Romance
-        </Button>
-        <Button
+        </button>
+        <button
+          className='flex-button'
           sx={{ color: "#21272D", fontWeight: "600" }}
           onClick={() => handleType("self-help")}
         >
           Self-help
-        </Button>
+        </button>
 
         {/* <Button
           sx={{ color: "#21272D", fontWeight: "600" }}
@@ -137,7 +141,7 @@ export default function Filter({
         min={minVal}
         max={maxVal}
       /> */}
-      </Box>
+      </div>
     </div>
   );
 }

@@ -42,6 +42,25 @@ export default function SuggestedBooks() {
         spaceBetween={5}
         navigation={true}
         modules={[Navigation]}
+        breakpoints={{
+          100: {
+            slidesPerView: 1,
+            spaceBetween: 5,
+          },
+          300: {
+            slidesPerView: 1,
+            spaceBetween: 5,
+          },
+          600: {
+            slidesPerView: 2,
+            spaceBetween: 5,
+          },
+
+          800: {
+            slidesPerView: 4,
+            spaceBetween: 5,
+          },
+        }}
       >
         {shuffled.map((product, index) => (
           <SwiperSlide
@@ -49,37 +68,40 @@ export default function SuggestedBooks() {
             onClick={() => navigate(`/details/${product.id}`)}
           >
             <div className='suggested-cardContent'>
-              <Card className='suggested-card'>
-                <CardMedia
-                  sx={{
-                    height: 230,
-                    width: 150,
-                    margin: "auto",
-                    paddingTop: "15px",
-                  }}
-                  image={product.image}
-                />
-              </Card>
-              <CardContent
-                className='suggested-text'
-                sx={{ padding: 0, paddingTop: "10px" }}
-              >
-                <Typography
-                  gutterBottom
-                  variant='h6'
-                  component='div'
-                  fontSize={"16px"}
-                  fontWeight={600}
+              <div className='suggested-wrapper'>
+                <Card className='suggested-card'>
+                  <CardMedia
+                    className='suggestedImage'
+                    sx={{
+                      height: 230,
+                      width: 150,
+                      margin: "auto",
+                      paddingTop: "15px",
+                    }}
+                    image={product.image}
+                  />
+                </Card>
+                <CardContent
+                  className='suggested-text'
+                  sx={{ padding: 0, paddingTop: "10px" }}
                 >
-                  {product.title}
-                </Typography>
-                <Typography variant='body2' color='text.primary'>
-                  {product.author}
-                </Typography>
-                <Typography variant='body2' color='text.primary'>
-                  ${product.price}
-                </Typography>
-              </CardContent>
+                  <Typography
+                    gutterBottom
+                    variant='h6'
+                    component='div'
+                    fontSize={"16px"}
+                    fontWeight={600}
+                  >
+                    {product.title}
+                  </Typography>
+                  <Typography variant='body2' color='text.primary'>
+                    {product.author}
+                  </Typography>
+                  <Typography variant='body2' color='text.primary'>
+                    ${product.price}
+                  </Typography>
+                </CardContent>
+              </div>
             </div>
           </SwiperSlide>
         ))}

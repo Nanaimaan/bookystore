@@ -47,6 +47,8 @@ function Navbar() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const cart = useSelector((state) => state.cart);
+  const user = useSelector((state) => state.auth.user);
+  const isAdmin = user.isAdmin;
   React.useEffect(() => {
     dispatch(getCart());
   }, [dispatch]);
@@ -164,6 +166,23 @@ function Navbar() {
                   </NavLink>
                 </MenuItem>
               ))}
+
+              {isAdmin && (
+                <MenuItem className='nav' onClick={handleCloseNavMenu}>
+                  <NavLink className='nav' to='/add'>
+                    <Typography
+                      sx={{
+                        color: "#21272d",
+                        textDecoration: "none",
+                        textAlign: "center",
+                        fontWeight: "600",
+                      }}
+                    >
+                      Add Product
+                    </Typography>
+                  </NavLink>
+                </MenuItem>
+              )}
             </Menu>
           </Box>
 

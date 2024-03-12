@@ -3,6 +3,9 @@
   display: flex;
   height: 300px;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+
   background-color: #92a8bb0e;
 }
 
@@ -11,4 +14,11 @@
   flex-direction: column;
   justify-content: flex-start;
   color: #21272d;
+}
+.product_card_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 }

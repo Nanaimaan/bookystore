@@ -2,7 +2,7 @@
   display: flex;
 
   flex-direction: column;
-
+  align-items: flex-start;
   margin: 2rem 0;
   width: 100%;
   height: 100%;
@@ -10,7 +10,6 @@
 .cartItemBody {
   display: flex;
 
-  width: 100%;
   gap: 6rem;
 }
 
@@ -54,4 +53,54 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
+}
+
+@media screen and (max-width: 600px) {
+  .cartItemBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .cartItem-content img {
+    width: 70px;
+  }
+  .cartText {
+    font-size: 14px;
+    width: 200px;
+  }
+  .cartItemAction button {
+    width: 70px;
+    height: 30px;
+    font-size: 10px;
+    padding: 0;
+  }
+  .cartItemAction input {
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cartItemBody {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cartText {
+    font-size: 14px;
+    width: 200px;
+    text-align: center;
+  }
+  .cartItemAction {
+    margin-top: 20px;
+  }
+  .cartItemAction button {
+    width: 70px;
+    height: 30px;
+    font-size: 10px;
+    padding: 0;
+  }
+  .cartItemAction input {
+    width: 40px;
+  }
 }

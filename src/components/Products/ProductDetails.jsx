@@ -71,17 +71,17 @@ const ProductDetails = () => {
             </button>
           </div>
           {user.isAdmin ? (
-            <div>
+            <div className='admin-buttons'>
               {" "}
-              <Button onClick={() => navigate(`/edit/${oneProduct.id}`)}>
+              <button onClick={() => navigate(`/edit/${oneProduct.id}`)}>
                 Edit
-              </Button>
-              <Button
+              </button>
+              <button
                 onClick={() => dispatch(deleteProduct(oneProduct.id))}
                 size='small'
               >
                 Delete
-              </Button>
+              </button>
             </div>
           ) : null}
 
@@ -101,19 +101,24 @@ const ProductDetails = () => {
         <div
           style={{
             paddingTop: "100px",
-            paddingLeft: "50px",
+
             marginBottom: "10px",
           }}
         >
           <Reviews productId={id} user={user} />
         </div>
-        <div className='reviews-list'>
+        <div>
           <h3>Product Reviews </h3>
-          <ul>
+          <ul className='reviews-list'>
             {reviews.map((review, index) => (
               <li key={index}>
-                <p> User: {review.author}</p>
-                <p> Rating: {review.rating}</p>
+                <div
+                  className='review
+                '
+                >
+                  <p> User: {review.author}</p>
+                  <p> Rating: {review.rating}</p>
+                </div>
                 <p> Review: {review.text}</p>
               </li>
             ))}

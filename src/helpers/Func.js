@@ -11,10 +11,16 @@ export const calcSubPrice = (item) => {
   return result;
 };
 export const checkUser = () => {
-  const user = JSON.parse(localStorage.getItem("currentUser"));
-  if (user) {
-    return user;
-  } else {
+  try {
+    const userData = localStorage.getItem("currentUser");
+    if (userData) {
+      const user = JSON.parse(userData);
+      return user;
+    } else {
+      return false;
+    }
+  } catch (error) {
+    console.error("Error parsing user data");
     return false;
   }
 };

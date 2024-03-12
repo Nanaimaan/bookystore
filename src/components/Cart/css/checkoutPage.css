@@ -28,3 +28,21 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 600px) {
+  .checkout_container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .checkout_container {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    font-size: 16px;
+  }
+}

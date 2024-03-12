@@ -2,7 +2,7 @@ import React from "react";
 import "./css/checkoutPage.css";
 
 function CheckoutPage({ totalPrice }) {
-  let total = parseFloat(totalPrice.toFixed(2));
+  let total = parseFloat(Math.round(totalPrice));
   return (
     <div className='checkout_container'>
       <div className='checkout-title'>

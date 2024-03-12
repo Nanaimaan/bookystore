@@ -6,7 +6,6 @@
   gap: 1.5rem;
 }
 .title-paragraph {
-  width: 600px;
   text-align: center;
   line-height: 1.75rem;
   margin-bottom: 1.75rem;
@@ -25,9 +24,9 @@ section {
   justify-content: center;
   align-items: center;
 }
-.events-card-img {
+/* .events-card-img {
   width: 400px;
-}
+} */
 .events-card-img img {
   width: 400px;
 }
@@ -53,4 +52,99 @@ section {
 .events-card-info h3 {
   margin-bottom: 2rem;
   font-size: 1.25rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .events-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .events-card-img {
+    display: flex;
+  }
+  .events-card-img img {
+    width: 200px;
+  }
+  .event-card-text {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .event-card-info {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .events-title {
+    font-size: 16px;
+  }
+  .events-title h1 {
+    font-size: 20px;
+  }
+  .events-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .events-card-img {
+    display: flex;
+  }
+  .events-card-img img {
+    width: 150px;
+  }
+  .event-card-text {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .event-card-info {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .event-card-info button {
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+    padding: 0;
+  }
+  .event-card-info h3 {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .events-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  .events-title {
+    width: 100%;
+  }
+  .events-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .event-card-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    text-align: center;
+  }
+  .event-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .event-card-info p {
+    text-align: center;
+  }
 }

@@ -13,7 +13,7 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useDispatch, useSelector } from "react-redux";
-import { login } from "./store/authSlice";
+import { authListener, login } from "./store/authSlice";
 import { useNavigate } from "react-router-dom";
 import logo from "../../images/logo-no-background.png";
 
@@ -35,9 +35,8 @@ export default function Login() {
       password: data.get("password"),
     };
     dispatch(login(obj));
-    if (user.email) {
-      navigate("/");
-    }
+    navigate("/");
+    dispatch(authListener());
   };
 
   return (
@@ -155,6 +154,7 @@ export default function Login() {
           </Box>
         </Grid>
       </Grid>
+
       {/* // </ThemeProvider> */}
     </div>
   );

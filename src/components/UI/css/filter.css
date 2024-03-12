@@ -2,3 +2,18 @@
   width: 100%;
   justify-content: flex-start;
 }
+.flex-button {
+  border: none;
+  background-color: white;
+  font-weight: 600;
+  margin-left: 30px;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 300px) {
+  .filter-type-container {
+    display: flex;
+    width: 200px;
+    margin-top: 20px;
+  }
+}

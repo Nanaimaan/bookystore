@@ -35,6 +35,7 @@
   font-weight: 600;
 }
 .book-description {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -65,5 +66,97 @@
   margin: 5rem 0;
 }
 .reviews-list h3 {
-  margin:50px;
+  margin: 50px;
+}
+.admin-buttons {
+  display: flex;
+  gap: 20px;
+}
+.admin-buttons button {
+  color: #21272d;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  list-style: none;
+  gap: 20px;
+  margin-top: 20px;
+}
+.reviews-list p {
+  margin-bottom: 10px;
+}
+.review {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 1000px) {
+  .bookImage img {
+    width: 200px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 800px) {
+  .detailWrapper {
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+    padding-right: 20px;
+  }
+  .bookDetails {
+    margin-left: 50px;
+  }
+  .bookImage img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .book-title h1 {
+    font-size: 20px;
+  }
+  .book-title p {
+    font-size: 16px;
+  }
+  .bookDetails {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .detailWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .bookDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  .book-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .book-description {
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .button {
+    width: 120px;
+    height: 40px;
+    font-size: 12px;
+  }
 }

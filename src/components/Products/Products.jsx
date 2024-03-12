@@ -32,9 +32,10 @@ const Products = () => {
   }, [page]);
 
   return (
-    <div>
+    <div className='productsList-container'>
       <div className='filter-products-wrapper'>
         <Filter
+          className='product-filter'
           searchParams={searchParams}
           setSearchParams={setSearchParams}
           getProducts={getProducts}
@@ -58,14 +59,14 @@ const Products = () => {
           }}
         >
           <Grid
-            sx={{ display: "flex", flexGrow: 1, marginLeft: "50px" }}
+            className='products_card'
+            sx={{ display: "flex", flexGrow: 1 }}
             container
             spacing={5}
             justifyContent='center'
-            margin={"10px"}
           >
             {products.map((product) => (
-              <Grid key={product.id} item xs={3}>
+              <Grid key={product.id} item xs={12} sm={6} md={4} lg={3}>
                 <Product product={product} />
               </Grid>
             ))}

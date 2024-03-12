@@ -8,8 +8,14 @@ import EditProduct from "../Products/EditProduct";
 import ProductDetails from "../Products/ProductDetails";
 import CartPage from "../Cart/CartPage";
 import Events from "../Products/Events";
+import { idText } from "typescript";
+import { useSelector } from "react-redux";
+import NotFound from "../UI/NotFound";
 
 const MainRouts = () => {
+  const privateRoutes = { id: 1, link: "/admin", element: <AddProduct /> };
+  const user = useSelector((state) => state.auth.user);
+
   return (
     <Routes>
       <Route path='/' element={<Homepage />}>
@@ -21,9 +27,10 @@ const MainRouts = () => {
       <Route path='/signin' element={<Login />}>
         {" "}
       </Route>
-      <Route path='/add' element={<AddProduct />}>
+      {/* <Route path='/add' element={<AddProduct />}>
         {" "}
-      </Route>
+      </Route> */}
+      {user.isAdmin && <Route path='/add' element={<AddProduct />} />}
       <Route path='/events' element={<Events />}>
         {" "}
       </Route>
@@ -36,6 +43,10 @@ const MainRouts = () => {
       <Route path='/cart/' element={<CartPage />}>
         {" "}
       </Route>
+      <Route path='*' element={<NotFound />}>
+        {" "}
+      </Route>
+      {}
     </Routes>
   );
 };

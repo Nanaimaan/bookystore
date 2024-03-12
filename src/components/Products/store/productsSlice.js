@@ -16,10 +16,9 @@ export const getProducts = createAsyncThunk(
   "product/getProducts",
 
   async () => {
-    console.log(`${API}${window.location.search || "?_limit=9"}`, "here");
     const res = await axios.get(`${API}${window.location.search}&_limit=${9}`);
-    console.log(res.headers["X-Total-Count"]);
-    return { data: res.data, totalCount: res.headers.get("X-Total-Count") };
+    // console.log(res.headers["x-total-count"], "totalpage");
+    return { data: res.data, totalCount: res.headers.get("x-total-count") };
   }
 );
 

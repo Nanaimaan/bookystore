@@ -22,24 +22,20 @@ export const login = createAsyncThunk("users/login", async (user) => {
 export const authListener = createAsyncThunk(
   "users/check",
   async (arg, { dispatch }) => {
-    try {
-      let user = null;
-      await fire.auth().onAuthStateChanged((user) => {
-        if (user) {
-          let newUser = {
-            user: user.email,
-            isAdmin: user.email === ADMIN_EMAIL ? true : false,
-            isLogged: true,
-          };
-          dispatch(setUser(newUser));
-        } else {
-          return {};
-        }
-      });
-      return user;
-    } catch (error) {
-      console.log(error);
-    }
+    await fire.auth().onAuthStateChanged((user) => {
+      if (user) {
+        let newUser = {
+          user: user.email,
+          isAdmin: user.email === ADMIN_EMAIL ? true : false,
+          isLogged: true,
+        };
+        dispatch(setUser(newUser));
+        console.log(newUser, "new");
+        return { newUser };
+      } else {
+        return {};
+      }
+    });
   }
 );
 
@@ -83,7 +79,7 @@ export const authSlice = createSlice({
     //login block ----------line
     [login.fulfilled]: (state, { payload: { user }, error }) => {
       state.user = user;
-      // console.log(user);
+
       let newUser = {
         user: user.email,
         isAdmin: user.email === ADMIN_EMAIL ? true : false,
@@ -100,15 +96,15 @@ export const authSlice = createSlice({
     [login.pending]: (state, action) => {
       state.loading = true;
     },
-    //Authlistener block
+    // Authlistener block
 
-    // [authListener.fulfilled]: (state, payload) => {
-    //   console.log(payload, "payload");
+    [authListener.fulfilled]: (state, { payload: newUser }) => {
+      console.log(newUser, "payload");
 
-    //   // localStorage.setItem("currentUser", JSON.stringify(authUser));
-    //   // state.user = user;
-    //   state.loading = true;
-    // },
+      // localStorage.setItem("currentUser", JSON.stringify(authUser));
+      // state.user = newUser;
+      state.loading = true;
+    },
   },
 });
 

@@ -32,6 +32,7 @@ export default function Register() {
       password: data.get("password"),
     };
     dispatch(signup(obj));
+    navigate("/");
 
     if (user.email) {
       navigate("/signin");
