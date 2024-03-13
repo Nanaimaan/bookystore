@@ -1,1 +1,1 @@
-export const API = "http://localhost:8000/products";
+export const API = "https://bloom-wave-freezer.glitch.me/products";
